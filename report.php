@@ -55,27 +55,35 @@
         <label for="" style="color:white;"><?=mysqli_num_rows($rs).'%'?></label>
     </div> 
     <div class="sub-div">
-    <p style="color:white;">About</p>
+     <p style="color:white;">About</p>
     </div> 
 </div>
 <div class="big">
     <h1 style="color:white; margin-left:30px; font-family:'Times New Roman', Times, serif;">Over View</h1>
 <table border="1px" cellspace="0px" cellpadding="5px">
+    <tr>
+        <th colspan="6px" style='text-align:center'>GENERAL REPORT</th>
+        <form action="" method="post"><input type="date" name="search"> <input type="submit" value="search" name="ok"></form>
+    </tr>
         <tr>
 
             <th>Event name</th>
             <th>Location</th>
+            <th>Date</th>
             <th>Name</th>
             <th>email</th>
             
         </tr>
         <?php
-        $select="SELECT attendees.*,events.* FROM attendees NATURAL JOIN events;";
+        if (isset($_POST['ok'])) {
+        $search=$_POST['search'];
+        $select="SELECT attendees.*,events.* FROM attendees NATURAL JOIN events WHERE Date='$search' ";
         $rs=mysqli_query($claude,$select);
         while ($row=mysqli_fetch_array($rs)){?>
         <tr>
             <td><?=$row['Name']?></td>
             <td><?=$row['Location']?></td>
+            <td><?=$row['Date']?></td>
             <td><?=$row['UseraName']?></td>
             <td><?=$row['Email']?></td>
             
@@ -84,6 +92,8 @@
 
         <?php
         
+        } 
+         
         }
         ?>
     </table>

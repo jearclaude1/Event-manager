@@ -14,11 +14,13 @@ if(isset($_POST['signup'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
 </head>
 <body>
+<div class="header">
     <fieldset>
     <h3>SIGN UP</h3>
     <form action="" method="post">
@@ -31,5 +33,6 @@ if(isset($_POST['signup'])){
         <h5>log in your account <a href="index.php">login</a></h5>
     </form>
     </fieldset>
+    </div>
 </body>
 </html>

@@ -105,3 +105,42 @@ th,td {
   th {
     background-color: #f2f2f2;
   }
+  .header{
+    width: 60%;
+    height: 60px;
+    text-align: center;
+    margin-top: 40vh;
+    margin-left: 20%;
+    
+  }
+  fieldset{
+    width: 80%;
+    height: 40vh;
+  }
+  .header input{
+    width: 90%;
+  }
+  .header input[type=submit]{
+    width: 15%;
+    height: 30px;
+    background-color: skyblue;
+    
+
+  }
+  .header input[type=submit]:hover{
+    color: white;
+
+  }
+  .header h3{
+    color: skyblue;
+  }
+  .header input{
+    border-width: 0px 0px 2px 2px;
+  }
+  .fetch{
+    margin-top: 50px;
+
+  }
+  .box{
+    height: 40px;
+  }

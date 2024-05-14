@@ -4,7 +4,7 @@ include 'db.php';
 session_start();
 
 if (isset($_SESSION['username'])) {
-    header('location:dashboard.php');
+    header('location:dassoard.php');
 }
 
 if(isset($_POST['signup'])){
@@ -34,9 +34,11 @@ if(isset($_POST['signup'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>LOGIN</title>
 </head>
 <body>
+<div class="header">
     <fieldset>
     <h3>LOGIN FORM</h3>
        <form action="" method="post">
@@ -49,5 +51,6 @@ if(isset($_POST['signup'])){
         <h5>create user account <a href="Signup.php">signup</a></h5>
     </form>
     </fieldset>
+    </div>
 </body>
 </html>

@@ -21,9 +21,9 @@
   <div class="menu">
     <nav>
         <ul>
-            <li> <a href="./attendence.php">Attendees</a></li>
+            <li> <a href="./attendece.php">Attendees</a></li>
             <li> <a href="./dashboard.php">Event</a></li>
-            <li> <a href="./report.php">Home</a></li>
+            <li> <a href="./repport.php">Home</a></li>
         </ul>
     </nav>
   </div>
@@ -32,7 +32,7 @@
 <div class="body_content">
     <form action="" method="post">
         <h1>ATTENDENCE</h1>
-     <select name="event" id="">
+     <select name="event" id="" class="box">
       <option value="name">Select Event</option>    
            <?php 
             $sel="select * from events";

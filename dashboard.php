@@ -57,7 +57,7 @@ include "db.php";
  <table border="2px" cellspace="0px" cellpadding="10px">
         <tr>
             <th>Event name</th>
-            <th>Name</th>
+            <th>Date</th>
             <th>Location</th>
             <th colspan="3px">action</th>
         </tr>
