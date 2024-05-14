@@ -64,19 +64,21 @@
         <tr>
 
             <th>Event name</th>
+            <th>Location</th>
             <th>Name</th>
             <th>email</th>
-            <th>Location</th>
+            
         </tr>
         <?php
-        $select="SELECT attendees.UseraName,events.*from attendees NATURAL JOIN events;";
+        $select="SELECT attendees.*,events.* FROM attendees NATURAL JOIN events;";
         $rs=mysqli_query($claude,$select);
         while ($row=mysqli_fetch_array($rs)){?>
         <tr>
-            <td><?=$row['UseraName']?></td>
             <td><?=$row['Name']?></td>
-            <td><?=$row['Date']?></td>
             <td><?=$row['Location']?></td>
+            <td><?=$row['UseraName']?></td>
+            <td><?=$row['Email']?></td>
+            
         </tr>
 
 
